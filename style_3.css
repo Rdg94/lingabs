@@ -22,10 +22,13 @@ body {
 
 #container-1 {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin: auto;
   height: 100vh;
-  justify-content: center;
+  /* padding-top: 20px;
+  padding-bottom: 30px;*/
 }
 
 #topo {
@@ -51,7 +54,7 @@ body {
 
 .images {
   width: 250px;
-  height: 3%;
+  height: 320px;
   object-fit: cover;
   object-position: center;
   margin-right: 10px;
@@ -141,5 +144,11 @@ footer {
   .images {
     width: 400px;
     height: 460px;
+  }
+
+  .container-2 {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 }
