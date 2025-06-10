@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff5f8;
+  color: #4a2c39;
+  padding: 20px;
+  padding-top: 0;
+  line-height: 1.6;
+  user-select: none;
+}
+
+/* conainaer central */
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#container-1 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  justify-content: center;
+}
+
+#topo {
+  height: 300px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  background: #fff0f5;
+  box-shadow: 0 4px 10px rgba(255, 0, 70, 0.2);
+}
+
+#carousel {
+  display: flex;
+  width: fit-content;
+  animation: slide 60s linear infinite;
+}
+
+.images {
+  width: 250px;
+  height: 3%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(255, 0, 70, 0.4);
+}
+
+/* Animação */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* textos */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+p:first-of-type {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #d81e5b;
+  user-select: text;
+}
+
+svg #line {
+  fill: none;
+  stroke: #d81e5b;
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite;
+}
+svg #point {
+  fill: none;
+  stroke: #d81e5b;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 0.1;
+  stroke-opacity: 1;
+  stroke-dasharray: 0.0001, 0.9999;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #d81e5b;
+  font-style: italic;
+  font-size: 0.1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  #topo {
+    height: 200px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .images {
+    width: 400px;
+    height: 460px;
+  }
+}
