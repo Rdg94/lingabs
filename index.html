@@ -3,88 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style_3.css" />
-    <title>Feliz dia dos namorados🖤🤍t</title>
+    <title>Surpresa ♥️</title>
+    <style>
+      body {
+        margin: 0;
+        background: #fff5f8;
+        color: #4a2c39;
+        font-family: "Arial", sans-serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+
+      button {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10px;
+        background-color: #ff3366;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #e6285c;
+      }
+    </style>
   </head>
   <body>
-    <div id="container-1">
-      <img
-        id="topo"
-        src="images/topo.png"
-        alt="imagem - Feliz dia dos namorados"
-      />
-      <div id="carousel-wrapper">
-        <div id="carousel">
-          <!-- Lista duplicada de imagens -->
-          <img class="images" src="images/image-1.jpeg" alt="Imagem 1" />
-          <img class="images" src="images/imge-2.jpeg" alt="Imagem 2" />
-          <img class="images" src="images/image-3.jpeg" alt="Imagem 3" />
-          <img class="images" src="images/image-4.jpeg" alt="Imagem 4" />
-          <img class="images" src="images/image-5.jpeg" alt="Imagem 5" />
-          <img class="images" src="images/image-6.jpeg" alt="Imagem 6" />
-          <img class="images" src="images/image-7.jpeg" alt="Imagem 7" />
-          <img class="images" src="images/image-8.jpeg" alt="Imagem 8" />
-          <!-- Duplicado -->
-          <img class="images" src="images/image-1.jpeg" alt="Imagem 1" />
-          <img class="images" src="images/imge-2.jpeg" alt="Imagem 2" />
-          <img class="images" src="images/image-3.jpeg" alt="Imagem 3" />
-          <img class="images" src="images/image-4.jpeg" alt="Imagem 4" />
-          <img class="images" src="images/image-5.jpeg" alt="Imagem 5" />
-          <img class="images" src="images/image-6.jpeg" alt="Imagem 6" />
-          <img class="images" src="images/image-7.jpeg" alt="Imagem 7" />
-          <img class="images" src="images/image-8.jpeg" alt="Imagem 8" />
-        </div>
-      </div>
-    </div>
+    <h1>Uma surpresa pra você! 🎁</h1>
+    <button onclick="irParaSurpresa()">Clique para continuar</button>
 
-    <div id="container-2">
-      <p>Oi, amor!</p>
-      <p>
-        Esse é o 9° dia dos namorados! Quem diria, né? E passou tão rápido...
-        Nesse ainda não tenho dinheiro pra te dar uma camiseta do Santos azul de
-        R$500,00 mas, fiz essa surpresinha (depois você paga o programador) pra
-        te dizer que eu continuo te amando!
-      </p>
-      <p>
-        Você é incrível, gentil, íntegro, persistente, tem um coração imenso!
-        Sou grata a Deus por tê-lo como marido e pai do meu filho!
-      </p>
-
-      <p>
-        Você me torna uma pessoa melhor e é um privilégio dividir a vida com
-        você! Obrigada por tudo! Que venham mais 10, 20, 30 dias como esse, e
-        que, a cada ano, a gente comemore com mais intensidade, com derramar do
-        vinho novo! Eu te amo! ♥️
-      </p>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        id="svg5"
-        version="1.1"
-        viewBox="-5 -5 278 56"
-      >
-        <filter id="blur">
-          <feGaussianBlur stdDeviation="1.6" />
-        </filter>
-        <g id="layer1" transform="translate(29.1 -127.42)">
-          <path
-            id="line"
-            d="M-28.73 167.2c26.43 9.21 68.46-9.46 85.45-12.03 18.45-2.78 32.82 4.86 28.75 9.83-3.82 4.66-25.77-21.18-14.81-31.5 9.54-8.98 17.64 10.64 16.42 17.06-1.51-6.2 2.95-26.6 14.74-22.11 11.7 4.46-4.33 49.03-15.44 44.08-6.97-3.1 15.44-16.26 26.1-16 23.03.56 55.6 27.51 126.63 3.36"
-            pathLength="1"
-          />
-        </g>
-        <g id="layer2" transform="translate(29.1 -127.42)">
-          <path
-            filter="url(#blur)"
-            id="point"
-            d="M-28.73 167.2c26.43 9.21 68.46-9.46 85.45-12.03 18.45-2.78 32.82 4.86 28.75 9.83-3.82 4.66-25.77-21.18-14.81-31.5 9.54-8.98 17.64 10.64 16.42 17.06-1.51-6.2 2.95-26.6 14.74-22.11 11.7 4.46-4.33 49.03-15.44 44.08-6.97-3.1 15.44-16.26 26.1-16 23.03.56 55.6 27.51 126.63 3.36"
-            pathLength="1"
-          />
-        </g>
-      </svg>
-    </div>
-    <footer>
-      <p id="footer_text">Feito com ♥️ para você!</p>
-    </footer>
+    <script>
+      function irParaSurpresa() {
+        window.location.href = "surpresa.html";
+      }
+    </script>
   </body>
 </html>
