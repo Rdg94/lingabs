@@ -7,6 +7,92 @@
     <title>Feliz dia dos namorados🖤🤍t</title>
   </head>
   <body>
+
+
+     <style>
+      /* ========== PRELOADER ========= */
+      #preloader {
+        position: fixed;
+        background: #fff5f8;
+        color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        transition: opacity 0.5s ease;
+      }
+
+      .heart {
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: relative;
+        transform: rotate(-45deg);
+        animation: pulse 1s infinite;
+        margin-bottom: 10px;
+      }
+
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: red;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        top: -25px;
+        left: 0;
+      }
+
+      .heart::after {
+        top: 0;
+        left: 25px;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1) rotate(-45deg);
+        }
+        50% {
+          transform: scale(1.2) rotate(-45deg);
+        }
+        100% {
+          transform: scale(1) rotate(-45deg);
+        }
+      }
+
+      /* ========== FADE IN ========= */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+      <div class="heart"></div>
+      <p>Carregando surpresa...</p>
+    </div>
+
+
     <audio id="music" autoplay loop>
       <source src="music/eles_se_amam.mp3" type="audio/mpeg" />
     </audio>
@@ -90,5 +176,24 @@
     <footer>
       <p id="footer_text">Feito com ♥️ para você!</p>
     </footer>
+
+     <!-- SCRIPT: PRELOADER E FADE-IN -->
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "1";
+        setTimeout(() => {
+          preloader.style.display = "none";
+
+          // Aplica fade-in em todos os elementos marcados
+          document.querySelectorAll(".fade-target").forEach((el, i) => {
+            setTimeout(() => {
+              el.classList.add("fade-in");
+            }, i * 300);
+          });
+        }, 7000);
+      });
+    </script>
+
   </body>
 </html>
